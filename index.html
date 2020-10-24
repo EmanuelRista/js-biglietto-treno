@@ -2,11 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Biglietteria TreniVeneto</title>
+    <title>Prove</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>La tua tariffa</h1>
-    <p><span id="travel"></span><span id="charges"></span></p>
-    <script src="js/script.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      alert ("Benvenuto in VenetoTreni!");
+      var km = parseInt(prompt("Quandi chilometri dovresti percorrere?"));
+      var ages = parseInt(prompt("Quanti anni hai fra?"));
+      if (ages < 18) {
+        alert("La tariffa del tuo biglietto sarà " + (km * 0.21) * 0.8 + " euro! Abbiamo applicato uno sconto minorenni del 20%");
+      }
+      else if (ages > 65) {
+        alert("La tariffa del tuo biglietto sarà " + (km * 0.21) * 0.6 + " euro! Abbiamo applicato uno sconto over-65 del 40%");
+      }
+      else if ((ages > 18) && (ages < 65)) {
+        alert("La tariffa del tuo biglietto sarà " + (km * 0.21) + " euro!");
+      }
+    </script>
   </body>
 </html>
